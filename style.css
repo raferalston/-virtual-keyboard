@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "b192 b49 b50 b51 b52 b53 b54 b55 b56 b57 b48 b189 b8 b8"
+    "b9 b81 b87 b69 b82 b84 b89 b85 b73 b79 b80 b219 b221 b46"
+    "b20 b20 b65 b83 b68 b70 b71 b72 b74 b75 b76 b186 b13 b13"
+    "b16 b16 b220 b90 b88 b67 b86 b66 b78 b77 b190 b188 b38 b187"
+    "b17 b91 b18 b32 b32 b32 b32 b32 b32 b222 b191 b37 b40 b39";
+    background-color: #46c3db;
+    border-radius: 5px;
+    padding: .5rem .25rem;
+}
+.keyboard > div:hover {
+    background-color: #fab0d1;
+}
+.keyboard > div {
+    font-family: fantasy;
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-color: #c5e3f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: .115rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all ease .15s;
+    box-shadow: 0 2px 0 0 #fc5c9c;
+    border-radius: 5px;
+}
+
+.keyboard > div > .extra-text {
+    font-size: 1rem;
+    position: relative;
+    right: 5px;
+}
+
+.clicked {
+    background-color: #fccde2 !important;
+    box-shadow: 0 0 0 0 #fc5c9c !important;
+    transform: translateY(2px);
+}
+
+.active {
+    background-color:#fc5c9c !important;
+    box-shadow: 0 0 0 0 #fc5c9c !important;
+    transform: translateY(2px);
+    color: #fcefee;
+}
+
+.output {
+    background-color: #fcefee;
+    width: 100%;
+    min-height: 20vh;
+    border-radius: 5px;
+    font-size: 1.25em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+    border: 0;
+    outline: 0;
+}
+
+.output:focus {
+    border: 0;
+    outline: 0;
+}
+
+.info {
+    color: #fc5c9c;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-text {
+    font-size: 1.25rem;
+    color: #fc5c9c;
+    font-family: fantasy;
+}
